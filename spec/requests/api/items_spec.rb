@@ -62,4 +62,10 @@ RSpec.describe 'Api::Items', type: :request do
       expect(response).to have_http_status(:not_found)
     end
   end
+
+  describe 'flaky test example' do
+    it 'randomly fails to demonstrate flakiness' do
+      expect([true, false].sample).to be true
+    end
+  end
 end 
