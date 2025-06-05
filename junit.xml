@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="rspec" tests="16" skipped="0" failures="0" errors="0" time="0.037848" timestamp="2025-06-05T22:56:35+02:00" hostname="skumar--20221020-PWQGD">
+<properties>
+<property name="seed" value="53124"/>
+</properties>
+<testcase classname="spec.controllers.api.items_controller_spec" name="Api::ItemsController GET #index returns an empty array initially" file="./spec/controllers/api/items_controller_spec.rb" time="0.009955"></testcase>
+<testcase classname="spec.controllers.api.items_controller_spec" name="Api::ItemsController POST #create creates an item and returns it" file="./spec/controllers/api/items_controller_spec.rb" time="0.004007"></testcase>
+<testcase classname="spec.controllers.api.items_controller_spec" name="Api::ItemsController GET #show returns the item if found" file="./spec/controllers/api/items_controller_spec.rb" time="0.000842"></testcase>
+<testcase classname="spec.controllers.api.items_controller_spec" name="Api::ItemsController GET #show returns 404 if not found" file="./spec/controllers/api/items_controller_spec.rb" time="0.000361"></testcase>
+<testcase classname="spec.controllers.api.items_controller_spec" name="Api::ItemsController PATCH #update updates the item if found" file="./spec/controllers/api/items_controller_spec.rb" time="0.000774"></testcase>
+<testcase classname="spec.controllers.api.items_controller_spec" name="Api::ItemsController PATCH #update returns 404 if not found" file="./spec/controllers/api/items_controller_spec.rb" time="0.000347"></testcase>
+<testcase classname="spec.controllers.api.items_controller_spec" name="Api::ItemsController DELETE #destroy deletes the item if found" file="./spec/controllers/api/items_controller_spec.rb" time="0.000726"></testcase>
+<testcase classname="spec.controllers.api.items_controller_spec" name="Api::ItemsController DELETE #destroy returns 404 if not found" file="./spec/controllers/api/items_controller_spec.rb" time="0.000344"></testcase>
+<testcase classname="spec.requests.api.items_spec" name="Api::Items GET /api/items returns an empty array initially" file="./spec/requests/api/items_spec.rb" time="0.001332"></testcase>
+<testcase classname="spec.requests.api.items_spec" name="Api::Items POST /api/items creates an item" file="./spec/requests/api/items_spec.rb" time="0.000574"></testcase>
+<testcase classname="spec.requests.api.items_spec" name="Api::Items GET /api/items/:id returns the item if found" file="./spec/requests/api/items_spec.rb" time="0.002161"></testcase>
+<testcase classname="spec.requests.api.items_spec" name="Api::Items GET /api/items/:id returns 404 if not found" file="./spec/requests/api/items_spec.rb" time="0.003620"></testcase>
+<testcase classname="spec.requests.api.items_spec" name="Api::Items PATCH /api/items/:id updates the item if found" file="./spec/requests/api/items_spec.rb" time="0.009141"></testcase>
+<testcase classname="spec.requests.api.items_spec" name="Api::Items PATCH /api/items/:id returns 404 if not found" file="./spec/requests/api/items_spec.rb" time="0.000703"></testcase>
+<testcase classname="spec.requests.api.items_spec" name="Api::Items DELETE /api/items/:id deletes the item if found" file="./spec/requests/api/items_spec.rb" time="0.001130"></testcase>
+<testcase classname="spec.requests.api.items_spec" name="Api::Items DELETE /api/items/:id returns 404 if not found" file="./spec/requests/api/items_spec.rb" time="0.000401"></testcase>
+</testsuite>

@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .ruby-version
+          bundler-cache: true
+
+      - name: Run RSpec tests
+        run: |
+          mkdir -p results
+          bundle exec rspec
+
+      - name: Upload RSpec JUnit results
+        uses: actions/upload-artifact@v4
+        with:
+          name: rspec-results
+          path: results/rspec.xml
+
+      - name: Upload results
+        if: "!cancelled()"
+        uses: trunk-io/analytics-uploader@main
+        with:
+          # Path to your test results.
+          junit-paths: **/*.xml
+          # Provide your Trunk organization slug.
+          org-slug: byteforge
+          # Provide your Trunk API token as a GitHub secret.
+          token: ${{ secrets.TRUNK_API_TOKEN }}
+        continue-on-error: true
+
